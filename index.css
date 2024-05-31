@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-top: 0px;
+}
+.active {
+    color: white !important;
+    border-bottom: 2px solid white !important;
+}
+.right-card-container {
+    margin-top: 20px;
+}
+#all{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container2 {
+  color: #fff;
+}
+
+.container2 {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circles-wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #5d43ba;;
+  top: -8px;
+  border-radius: 50%;
+  
+  
+}
+
+
+.circle-lg {
+  width: 200px;
+  height: 200px;
+  animation: rotateCircles 2.5s linear infinite;
+}
+
+.tags{
+  z-index: 10;
+ color: white;
+}
+
+
+@keyframes rotateCircles {
+  from {
+    transform: rotate(0);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+ 
+/* CSS pog button  */
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+a {
+	display: block;
+	position: relative;
+	padding: 0.2em 0;
+}
+a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: rgba(0, 0, 0, 0.408);
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+a:hover::after,
+a:focus::after {
+	opacity: 1;
+	transform: translate3d(0, 0.2em, 0);
+}
+li a::after {
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+}
+li a:hover::after,
+li a:focus::after{
+	transform: scale(1);
+}
+
+
+
+/* Underline styles */
+span {
+  display: inline-block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+/* Fade in */
+span::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 0.05em;
+  background-color: #5d43ba; /* Change the underline color */
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+span:hover::after,
+span:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 1.5rem, 0); /* Adjust the vertical position of the underline */
+}
+
+/* Scale from center */
+span::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+span:hover::after,
+span:focus::after {
+  transform: scale(1);
+}
+.circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.circle1, .circle2, .circle3, .circle4 {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle1 {
+    left: 30%;
+    z-index: 5;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    opacity: 1;
+}
+.circle2 {
+    left: 40%;
+    z-index: 4;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black; /* Decreased border width */
+    background-color: transparent;
+    opacity: 0.75;
+}
+.circle3 {
+    left: 50%;
+    z-index: 3;
+    width: 220px;
+    height: 220px;
+    border: 0.75px solid black; /* Decreased border width */
+    background-color: transparent;
+    opacity: 0.5;
+}
+.circle4 {
+    left: 60%;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    border: 0.5px solid black; /* Decreased border width */
+    background-color: transparent;
+    opacity: 0.25;
+}
+
+/* CSS for active button indicator */

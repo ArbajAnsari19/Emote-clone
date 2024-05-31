@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+    <div id="main" >
+        <nav class="w-screen flex justify-between p-5">
+            <img class="w-[90px] h-[32px]" src="assets/logo.png" alt="logo">
+            <ul class="mt-4 w-[48vw] flex gap-[60px] text-[15px] font-[500]">
+                <li><a href="#">Our Work</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">About Us</a></li>
+              <button class="w-44 h-12 rounded-3xl text-white bg-black border border-black -mt-3 hover:bg-white hover:text-black hover:border-black">Start a Project</button>
+
+
+            </ul>
+        </nav>
+        
+        
+  
+      <div id="hero" class="w-screen flex h-[75vh] justify-center items-center">
+        <div class="text-[40px] w-[74vw]">
+            We are a full-cycle agency that delivers turnkey projects, and by identifying the 
+            <span id="branding" class="font-bold text-[#5d43ba] inline-block w-[200px] h-[40px] text-center leading-[40px]">branding</span>,
+            creating the <span id="web-design" class="font-bold text-[#5d43ba] inline-block w-[255px] h-[40px] text-center leading-[40px]">web design</span>, 
+            and <span id="mobile-app" class="font-bold text-[#5d43ba] inline-block w-[250px] h-[40px] text-center leading-[40px]">mobile app</span> <br>
+            we turn it into a live product.
+        </div>
+      </div>
+    
+    
+    
+
+
+        <div id="video" class="w-screen  object-cover h-auto justify-center">
+            <video class="w-full h-full" loop autoplay muted src="https://emote.agency/wp-content/uploads/2021/04/Showreel.mp4"></video> 
+         </div>
+
+        <div class="w-screen h-screen mt-[20vh]">
+            <div class="container h-full mx-auto px-4 py-8">
+                <h1 class="text-4xl font-bold mb-8 text-left">Our approach</h1>
+        
+                <!-- Main Container -->
+                <div class="flex text-start h-[50vh] flex-row md:flex-row ">
+                   
+                    <!-- Left Div - Image -->
+                    <div id="image-container" class="w-[50vw] h-[full] mb-8 md:mb-0 md:mr-8">
+                        <img id="main-image" src="assets/1.png" alt="Illustration" class="object-cover	">
+                    </div>
+        
+                    <!-- Right Div - Text and Navigation -->
+                    <div class="w-[50vw] h-[45vh] flex flex-col justify-end">
+                        <!-- Navigation -->
+                        <nav class="mb-4 relative">
+                            <ul class="flex justify-between text-lg">
+                                <li><button id="btn-discover" class="font-bold text-black" onclick="showContent('discover')">Discover</button></li>
+                                <li><button id="btn-strategise" class="text-gray-400 font-bold" onclick="showContent('strategise')">Strategise</button></li>
+                                <li><button id="btn-structure" class="text-gray-400 font-bold" onclick="showContent('structure')">Structure</button></li>
+                                <li><button id="btn-create" class="text-gray-400 font-bold" onclick="showContent('create')">Create</button></li>
+                                <li><button id="btn-emote" class="text-gray-400 font-bold" onclick="showContent('emote')">Emote</button></li>
+                            </ul>
+                            <div id="active-indicator" class="absolute left-0 -bottom-3  h-3 w-3 rounded-full bg-purple-600"></div>
+                        </nav>
+                    
+                        <!-- Text Content -->
+                        <div id="content-discover" class="text-lg text-gray-600 mt-9">
+                            We aimed to dive into the client's project and its environment. A deep understanding of the target audience; its behaviors in the digital space; why and how this product will help is crucial before the launch.
+                        </div>
+                        <div id="content-strategise" class="text-lg text-gray-600 mt-9 hidden">
+                            Facing the issues in understanding the market and audience could be solved within discover stage. But building the right strategy of the digital product it whole knowledge of predicting most scenarios and work on it.
+                        </div>
+                        <div id="content-structure" class="text-lg text-gray-600 mt-9 hidden">
+                            Building the user story helps to get the most common user scenarios. Based on it we prepare user flow. So you can feel and test the roadmap before the launch. Right structure forecast right users behaviors in each step.
+                        </div>
+                        <div id="content-create" class="text-lg text-gray-600 mt-9 hidden">
+                            Now we all set. It's time to create and deliver the whole digital product. Main key stages passed and now every single step would be confirmed with you. This is your project and we here just to help you with it.
+                        </div>
+                        <div id="content-emote" class="text-lg text-gray-600 mt-9 hidden">
+                            You want something different? Thinking out of box and fresh new vision? Maybe you are looking for Wow-effect? What’s more you need? Clients’ and User experience? You are in the right place to rock with us! We are Emote!
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="bg-black text-white flex justify-center items-center min-h-screen">
+        <div class="main-div w-4/5 p-5 rounded-lg">
+            <div class="buttons flex gap-[100px] mb-5">
+                <button class=" py-2 bg-transparent text-gray-400" onclick="showCards('all')">All</button>
+                <button class=" py-2 bg-transparent text-gray-400" onclick="showCards('web-design')">Web Design</button>
+                <button class=" py-2 bg-transparent text-gray-400" onclick="showCards('mobile-app')">Mobile App</button>
+                <button class=" py-2 bg-transparent text-gray-400" onclick="showCards('branding')">Branding</button>
+            </div>
+            <div id="all" class="cards flex flex-wrap">
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-5-1200x1016.png" alt="Card 1" class="rounded-lg">
+                        <div class=" mt-8 card-subtitle text-[20px] font-bold text-white">Skipsolabs</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-3-1200x1016.png" alt="Card 2" class="rounded-lg">
+                        <div class="mt-8 card-subtitle text-[20px] font-bold text-white">Immplify</div>
+                    </div>
+                </div>
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-2-1200x1016.png" alt="Card 3" class="rounded-lg">
+                        <div class="mt-8 card-subtitle text-[20px] font-bold text-white">MetaPastry</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-4-1200x1016.png" alt="Card 4" class="rounded-lg">
+                        <div class="mt-8 card-subtitle text-[20px] font-bold text-white">The Runway</div>
+                    </div>
+                </div>
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2021/10/Cover-22-1200x1016.jpg" alt="Card 5" class="rounded-lg">
+                        <div class="mt-8 card-subtitle text-[20px] font-bold text-white">Milkytime</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2021/10/cover-21-1200x1016.jpg" alt="Card 6" class="rounded-lg">
+                        <div class="mt-8 card-subtitle text-[20px] font-bold text-white">Clother</div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="circles-wrapper">
+                      <div class="circle circle-lg">
+                        View More
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+            </div>
+            <div id="web-design" class="cards flex flex-wrap hidden">
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-5-1200x1016.png" alt="Web Design Card 1" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Web Design Card 1</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-3-1200x1016.png" alt="Web Design Card 2" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Web Design Card 2</div>
+                    </div>
+                </div>
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-2-1200x1016.png" alt="Web Design Card 3" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Web Design Card 3</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-4-1200x1016.png" alt="Web Design Card 4" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Web Design Card 4</div>
+                    </div>
+                </div>
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-22-1200x1016.png" alt="Web Design Card 5" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Web Design Card 5</div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-app" class="cards flex flex-wrap hidden">
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-5-1200x1016.png" alt="Mobile App Card 1" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Mobile App Card 1</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-4-1200x1016.png" alt="Mobile App Card 2" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Mobile App Card 2</div>
+                    </div>
+                </div>
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-2-1200x1016.png" alt="Mobile App Card 3" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Mobile App Card 3</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-3-1200x1016.png" alt="Mobile App Card 4" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Mobile App Card 4</div>
+                    </div>
+                </div>
+            </div>
+            <div id="branding" class="cards flex flex-wrap hidden">
+                <div class="card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-5-1200x1016.png" alt="Branding Card 1" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Branding Card 1</div>
+                    </div>
+                </div>
+                <div class="card-container right-card-container flex flex-col w-1/2 p-2">
+                    <div class="card  text-black p-5 rounded-lg">
+                        <img src="https://emote.agency/wp-content/uploads/2024/02/Cover-4-1200x1016.png" alt="Branding Card 2" class="rounded-lg">
+                        <div class="card-title mt-2 font-bold">Branding Card 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-screen h-screen m-5">
+            <img src="assets/bottom.png" alt="">
+        </div>
+        <div class="h-[60vh] w-screen bg-white mt-[90px] text-gray-800">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between lg:justify-start p-8 lg:p-16 space-y-8 lg:space-y-0 lg:space-x-8">
+                <div class=" h-screen w-[50%] flex font-bold justify-center">
+                    <h1 class="text-[50px] font-bold">We are passionate</h1>
+                </div>
+                <div class="font-[Montserrat] h-screen p-6 w-[50%] text-[19px] leading-8">
+                    <p class="mb-4">
+                        Overcoming expectations is our mission. We're here to follow your vision and extend it into one consistent product. You got all according to our agreement, and some more.
+                    </p>
+                    <br>
+                    <p class="mb-4">
+                        The process based on a customer-centric approach. Nowadays brand communication should be something that people really want to be involved in. Understanding and vibing your audience is what we're here for.
+                    </p>
+                    <br>
+                    <p>
+                        It may be not easy and time-consuming, but we don't look for short ways. We're lordly of our mission and it's this attitude that defines us.
+                    </p>
+                </div>
+            </div>
+    
+
+    </div>
+
+    <div class="circle-container">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    </div>
+
+
+    <footer class="bg-white border-t font-[Montserrat] border-gray-200 py-10 px-5 md:px-10">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-lg font-bold mb-2">Contact</h3>
+                <a href="mailto:hey@emote.agency" class="text-black mb-1 block">hey@emote.agency</a>
+                <p class="text-gray-700">Petržílková 2704/34, Stodůlky, Prague, Czech Republic, 158 00</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-2">Follow us</h3>
+                <div class="flex space-x-4">
+                    <a href="https://dribbble.com" target="_blank" class="text-black hover:underline">Dribbble</a>
+                    <a href="https://behance.net" target="_blank" class="text-black hover:underline">Behance</a>
+                    <a href="https://instagram.com" target="_blank" class="text-black hover:underline">Instagram</a>
+                    <a href="https://awwwards.com" target="_blank" class="text-black hover:underline">Awwwards</a>
+                    <a href="https://linkedin.com" target="_blank" class="text-black hover:underline">LinkedIn</a>
+                    <a href="https://twitter.com" target="_blank" class="text-black hover:underline">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
+
+
+
+
+
